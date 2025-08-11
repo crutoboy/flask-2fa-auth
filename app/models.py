@@ -122,7 +122,7 @@ class User(UserMixin, db.Model):
         img_buffer.seek(0)
         
         base64_img = base64.b64encode(img_buffer.getvalue()).decode()
-        return f'<img src="data:image/png;base64,{base64_img}" class="img-fluid" alt="QR Code for 2FA Setup" style="max-width: 200px;">'
+        return f'{base64_img}'
     
     def enable_2fa(self):
         """Enable two-factor authentication for the user."""

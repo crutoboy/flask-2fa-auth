@@ -25,7 +25,7 @@
                         <h5><i class="bi bi-qr-code"></i> Step 1: Scan QR Code</h5>
                         <div class="text-center mb-3">
                             <div class="qr-code-container">
-                                {{ qr_code|safe }}
+                                <img src="data:image/png;base64,{{ qr_code|safe }}" class="img-fluid" alt="QR Code for 2FA Setup" style="max-width: 200px;">
                             </div>
                         </div>
                         
